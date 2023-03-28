@@ -90,7 +90,7 @@ Keyboard keys are indicated using rounded buttons.
    appear in a few seconds. Note how the app contains some sample data.<br/>
    ![Ui](images/Ui.png)
    <p style="text-align: center;">Figure 1: InternBuddy's GUI</p>
-
+    <div style="page-break-after: always;"></div>
 5. You can interact with InternBuddy by typing into the box with the text `Enter command here...`, then pressing
    <button>Enter</button> to execute your command. For example, typing help and pressing <button>Enter</button> will open
    the help window.
@@ -115,8 +115,10 @@ Do refer to [Features](#features) below for a comprehensive list of supported fe
 Figure 2 provides a visual representation of the different parts of InternBuddy's GUI,  while
 Figure 3 explains what each part is used for.
 
+<p align="center">
+  <img src="images/gui-markup.png" width="600" />
+</p>
 
-![Graphical User Interface](images/gui-markup.png)
 <p style="text-align: center;">Figure 2: Different parts of InternBuddy's GUI</p>
 <br/>
 
@@ -196,6 +198,8 @@ Figure 4 provides a summary of the parameters with their descriptions, prefixes 
 | `INDEX`        | The index number of the internship entry as displayed in the [List Panel](#exploring-the-graphical-user-interface) | -      | A positive integer that is smaller than or equal to the largest index number shown in the List Panel. Note that 0 is not a positive integer.            |
 
 <p style="text-align: center;">Figure 4: Parameters with their descriptions, prefixes and constraints</p>
+
+<div style="page-break-after: always;"></div>
 
 ### Details on `STATUS` and `DATE`
 The parameter `STATUS` is used to represent the current status of an internship application. It can only take on one
@@ -312,6 +316,7 @@ Examples:
 
 <br/>
 
+<div style="page-break-after: always;"></div>
 
 ### Editing an Internship : `edit`
 
@@ -461,6 +466,7 @@ Format: `upcoming`
 Examples: 
 * `upcoming` If today's date is 5 January 2023, it will list all internships that have a `STATUS`of `NEW/OFFERED/ASSESSMENT/INTERVIEW` and `DATE` is from 5 January 2023 to 11 January 2023 inclusive.
 
+<div style="page-break-after: always;"></div>
 
 ### Deleting Internships by Index : `delete-index`
 Having multiple internships that you wish to quickly delete using their indices? You can achieve this
@@ -485,7 +491,7 @@ Examples:
 ![Delete Command](images/ug-delete-example.png)
    <p style="text-align: center;">Figure 13: Example of the delete-index command in action</p>
 
-
+<div style="page-break-after: always;"></div>
 
 ### Deleting Internships by Parameters : `delete-parameter`
 Wishing that you could delete internships using parameters instead of indices? You can
@@ -523,19 +529,7 @@ e.g., `delete-parameter n/Google n/Apple s/New`, `delete-parameter n/Google n/Ap
   of `Google` **or** `Apple` **and** roles of `Applied` **or** `New`.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div style="page-break-after: always;"></div>
 
 ### Clearing all Internships : `clear`
 The `clear` command permanently deletes all entries from InternBuddy.
@@ -696,32 +690,29 @@ The following steps outline how you can properly edit the `internbuddy.json` fil
 2. Once opened, you will see the JSON data file in a format as shown in Figure 17. Each box contains the data for one
    specific internship entry.
 3. Within each box, you can see that there are pairings where each pair is made up of a `PARAMETER` and `VALUE`.
-
-![Json Example](images/ug-appendix-b-json-example.png)
+   <p align="center">
+    <img src="images/ug-appendix-b-json-example.png" width="550" />
+   </p>
    <p style="text-align: center;">Figure 17: Sample JSON data file</p>
-
-<br/>
-
-
+   
+   <br/>
+    <div style="page-break-after: always;"></div>
 
 4. To manually change the value of a parameter, simply replace the text for `VALUE`. Figure 18 illustrates an example
    where we change the value of `STATUS` from `assessment` to `interview` for the internship entry with company name
    `Google`. Once your changes have been made, you can save the file by pressing <button>CTRL</button> + <button>S</button>.
-<div markdown="span" class="alert alert-danger">
+    <div markdown="span" class="alert alert-danger">
+    
+    :warning: **Warning:**  Make sure that you follow the [constraints](#descriptions-prefixes-and-constraints-for-parameters)
+    when substituting in your own values. If the constraints are not satisfied, InternBuddy would not be able to
+    read your data in `internbuddy.json` file and would restart with a new sample data file instead.
+    
+    </div>
 
-:warning: **Warning:**  Make sure that you follow the [constraints](#descriptions-prefixes-and-constraints-for-parameters)
-when substituting in your own values. If the constraints are not satisfied, InternBuddy would not be able to
-read your data in `internbuddy.json` file and would restart with a new sample data file instead.
-
-</div>
-
-![Editing the JSON File](images/ug-appendix-b-json-change.png)
-   <p style="text-align: center;">Figure 18: Editing the JSON file</p>
-
-<br/>
-
-
-
+    ![Editing the JSON File](images/ug-appendix-b-json-change.png)
+       <p style="text-align: center;">Figure 18: Editing the JSON file</p>
+    
+    <br/>
 5. Launch InternBuddy and you will see that your data have been updated accordingly.
 
 
@@ -737,15 +728,18 @@ Follow the following steps to populate InternBuddy with sample data.
    ![InternBuddy Sample Data](images/github-raw.png)
    <p style="text-align: center;">Figure 19: Raw button on GitHub interface</p>
     <br/>
+   <div style="page-break-after: always;"></div>
 3. Your screen will look like Figure 20. Right click, then click on `Save As`.
-   ![InternBuddy Sample Data](images/internbuddy-json-sample.png)
+   <p align="center">
+    <img src="images/internbuddy-json-sample.png" width="300" />
+   </p>
+
    <p style="text-align: center;">Figure 20: InternBuddy Sample Data</p>
     <br/>
 4. You will be prompted to choose a folder to save the file in. Choose the [home folder](#quick-start) that
    you have chosen for InternBuddy.
 5. Click `Save`.
     <div markdown="span" class="alert alert-danger">
-    
     :warning: **Warning:**  If you have an existing `internbuddy.json` file in the [home folder](#quick-start),
     you will be prompted to confirm whether you want to overwrite the existing file. Only overwrite if you
     are sure that you do not need your old InternBuddy data anymore, and would like to populate InternBuddy with
