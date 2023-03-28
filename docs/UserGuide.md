@@ -718,8 +718,9 @@ The following steps outline how you can properly edit the `internbuddy.json` fil
     </div>
     <br/>
 
-    ![Editing the JSON File](images/ug-appendix-b-json-change.png)
-       <p style="text-align: center;">Figure 18: Editing the JSON file</p>
+   ![Editing the JSON File](images/ug-appendix-b-json-change.png)
+
+    <p style="text-align: center;">Figure 18: Editing the JSON file</p>
     
     <br/>
 5. Launch InternBuddy and you will see that your data have been updated accordingly.
