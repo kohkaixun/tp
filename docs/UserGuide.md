@@ -8,7 +8,7 @@ title: User Guide
 
 <div style="page-break-after: always;"></div>
 
-<br/>
+
 
 ## **Introducing InternBuddy**
 
@@ -27,7 +27,7 @@ InternBuddy runs using Java 11, and is available on the Windows, macOS and Linux
 
 <div style="page-break-after: always;"></div>
 
-<br/>
+
 
 ## **About the User Guide**
 
@@ -73,7 +73,7 @@ Keyboard keys are indicated using rounded buttons.
 
 <div style="page-break-after: always;"></div>
 
-<br/>
+
 
 ## **Quick Start**
 
@@ -111,7 +111,7 @@ Do refer to [Features](#features) below for a comprehensive list of supported fe
 
 <div style="page-break-after: always;"></div>
 
-<br/>
+
 
 ## **Exploring the Graphical User Interface**
 Figure 2 provides a visual representation of the different parts of InternBuddy's GUI,  while
@@ -141,7 +141,7 @@ Figure 3 explains what each part is used for.
 
 <div style="page-break-after: always;"></div>
 
-<br/>
+
 
 ## **Command Information**
 
@@ -274,7 +274,7 @@ they have different values for `COMPANY_NAME`.
 
 <div style="page-break-after: always;"></div>
 
-<br/>
+
 
 
 ## **Features**
@@ -609,7 +609,7 @@ with the content in `internbuddy.json` unless you are confident in doing so. If 
 
 <div style="page-break-after: always;"></div>
 
-<br/>
+
 
 ## **FAQ**
 
@@ -623,7 +623,7 @@ that we are exploring and hope to implement in the future!
 
 <div style="page-break-after: always;"></div>
 
-<br/>
+
 
 ## **Command Summary**
 Figure 16 provides an overview of the commands supported in InternBuddy.
@@ -648,7 +648,7 @@ Figure 16 provides an overview of the commands supported in InternBuddy.
 
 <div style="page-break-after: always;"></div>
 
-<br/>
+
 
 ## **Appendix A: Installing Java 11**
 Follow the following steps to set up Java 11 in your computer.
@@ -717,11 +717,11 @@ read your data in `internbuddy.json` file and would restart with a new sample da
 
 <div style="page-break-after: always;"></div>
 
-<br/>
+
 
 
 ## **Appendix C: Populating InternBuddy with Sample Data**
-Follow the following steps to populate InternBuddy with the default sample data.
+Follow the following steps to populate InternBuddy with sample data.
 1. Visit this [link](https://github.com/AY2223S2-CS2103T-T14-3/tp/blob/master/internbuddy.json).
 2. In the top right corner, click the button labelled `Raw`. Figure 19 shows where the `Raw` button is.
    ![InternBuddy Sample Data](images/github-raw.png)
@@ -733,20 +733,17 @@ Follow the following steps to populate InternBuddy with the default sample data.
     <br/>
 4. You will be prompted to choose a folder to save the file in. Choose the [home folder](#quick-start) that
    you have chosen for InternBuddy.
-
-
-
 5. Click `Save`.
-
-<div markdown="span" class="alert alert-danger">
-
-:warning: **Warning:**  If you have an existing `internbuddy.json` file in the [home folder](#quick-start),
-you will be prompted to confirm whether you want to overwrite the existing file. Only overwrite if you
-are sure that you do not need your old InternBuddy data anymore, and would like to populate InternBuddy with
-the sample data instead.
-</div>
-
+    <div markdown="span" class="alert alert-danger">
+    
+    :warning: **Warning:**  If you have an existing `internbuddy.json` file in the [home folder](#quick-start),
+    you will be prompted to confirm whether you want to overwrite the existing file. Only overwrite if you
+    are sure that you do not need your old InternBuddy data anymore, and would like to populate InternBuddy with
+    the sample data instead.
+    </div>
 6. You are done! InternBuddy will be populated with the sample data the next time you launch it.
+
+<div style="page-break-after: always;"></div>
 
 ## **Glossary**
 Figure 21 provides a glossary for the technical terms used in this user guide.
