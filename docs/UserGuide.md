@@ -542,7 +542,9 @@ Example:
 <div markdown="span" class="alert alert-danger">
 
 :warning: **Warning:**  It would be good to think twice before running this command because
-once you run this command, all your internship data will be deleted.
+once you run this command, all your internship data will be deleted. If you wish to repopulate
+InternBuddy with sample data in the event that you accidentally ran `clear`, do refer
+to [Appendix C](#appendix-c-populating-internbuddy-with-sample-data).
 
 </div>
 
@@ -552,12 +554,12 @@ using the `help` command.
 
 Format: `help`
 * Opens a new window which displays the list of supported commands in InternBuddy, and provides a link to InternBuddy's
-  user guide where you can view more detailed information about each command.
+  user guide where you can view more detailed information about each command. Figure 15 shows how the Help Window looks like.
 * You can click on the <button>Copy URL</button> button to copy the link to your clipboard.
 
 
 ![Help Command](images/ug-help-window.png)
-   <p style="text-align: center;">Figure XX: Help Window</p>
+   <p style="text-align: center;">Figure 15: Help Window</p>
 
 <br/>
 
@@ -624,6 +626,7 @@ that we are exploring and hope to implement in the future!
 <br/>
 
 ## **Command Summary**
+Figure 16 provides an overview of the commands supported in InternBuddy.
 
 | Action                        | Format, Examples                                                                                                                          |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
@@ -641,7 +644,7 @@ that we are exploring and hope to implement in the future!
 | Exit                          | `exit`                                                                                                                                    |
 
 
-<p style="text-align: center;">Figure XX: Commands in InternBuddy</p>
+<p style="text-align: center;">Figure 16: Commands in InternBuddy</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -680,18 +683,18 @@ previously.
 The following steps outline how you can properly edit the `internbuddy.json` file:
 1. Open the `internbuddy.json` file by double-clicking on it. If you are prompted to select an application to open
    the file, you can choose any text editor such as `Notepad`.
-2. Once opened, you will see the JSON data file in a format as shown in Figure XX. Each box contains the data for one
+2. Once opened, you will see the JSON data file in a format as shown in Figure 17. Each box contains the data for one
    specific internship entry.
 3. Within each box, you can see that there are pairings where each pair is made up of a `PARAMETER` and `VALUE`.
 
 ![Json Example](images/ug-appendix-b-json-example.png)
-   <p style="text-align: center;">Figure XX: Sample JSON data file</p>
+   <p style="text-align: center;">Figure 17: Sample JSON data file</p>
 
 <br/>
 
 
 
-4. To manually change the value of a parameter, simply replace the text for `VALUE`. Figure XX illustrates an example
+4. To manually change the value of a parameter, simply replace the text for `VALUE`. Figure 18 illustrates an example
    where we change the value of `STATUS` from `assessment` to `interview` for the internship entry with company name
    `Google`. Once your changes have been made, you can save the file by pressing <button>CTRL</button> + <button>S</button>.
 <div markdown="span" class="alert alert-danger">
@@ -703,7 +706,7 @@ read your data in `internbuddy.json` file and would restart with a new sample da
 </div>
 
 ![Editing the JSON File](images/ug-appendix-b-json-change.png)
-   <p style="text-align: center;">Figure XX: Editing the JSON file</p>
+   <p style="text-align: center;">Figure 18: Editing the JSON file</p>
 
 <br/>
 
@@ -720,9 +723,14 @@ read your data in `internbuddy.json` file and would restart with a new sample da
 ## **Appendix C: Populating InternBuddy with Sample Data**
 Follow the following steps to populate InternBuddy with the default sample data.
 1. Visit this [link](https://github.com/AY2223S2-CS2103T-T14-3/tp/blob/master/internbuddy.json).
-2. In the top right corner, click the button labelled `Raw`. Figure XX shows where the `Raw` button is.
-
-3. Your screen will look like Figure XX. Right click, then click on `Save As`.
+2. In the top right corner, click the button labelled `Raw`. Figure 19 shows where the `Raw` button is.
+   ![InternBuddy Sample Data](images/github-raw.png)
+   <p style="text-align: center;">Figure 19: Raw button on GitHub interface</p>
+    <br/>
+3. Your screen will look like Figure 20. Right click, then click on `Save As`.
+   ![InternBuddy Sample Data](images/internbuddy-json-sample.png)
+   <p style="text-align: center;">Figure 20: InternBuddy Sample Data</p>
+    <br/>
 4. You will be prompted to choose a folder to save the file in. Choose the [home folder](#quick-start) that
    you have chosen for InternBuddy.
 
@@ -741,7 +749,7 @@ the sample data instead.
 6. You are done! InternBuddy will be populated with the sample data the next time you launch it.
 
 ## **Glossary**
-
+Figure 21 provides a glossary for the technical terms used in this user guide.
 
 | Term                           | Definition                                                                                                                                                                                                                                                                                                                           |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -752,7 +760,7 @@ the sample data instead.
 | Parameter                      | A part of the command where you have to supply a value for the command to be valid.                                                                                                                                                                                                                                                  |
 | Prefix                         | A short form for the name of a parameter. It indicates which parameter does a value belongs to. For example, in `n/Apple`, the value `Apple` is supplied to the parameter `COMPANY_NAME` since the `n/` prefix is used.                                                                                                              |
 
-<p style="text-align: center;">Figure XX: Glossary for InternBuddy's User Guide</p>
+<p style="text-align: center;">Figure 21: Glossary for InternBuddy's User Guide</p>
 
 ## **Acknowledgements**
 
