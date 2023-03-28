@@ -6,7 +6,10 @@ title: User Guide
 * Table of Contents
 {:toc}
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
+
+<br/>
+
 ## **Introducing InternBuddy**
 
 InternBuddy is a desktop application for Computing undergraduates to manage their internship applications.
@@ -22,8 +25,10 @@ InternBuddy runs using Java 11, and is available on the Windows, macOS and Linux
   <img width="400" height="255" src="images/internbuddy-computer.png">
 </p>
 
+<div style="page-break-after: always;"></div>
 
---------------------------------------------------------------------------------------------------------------------
+<br/>
+
 ## **About the User Guide**
 
 ### Objectives of the User Guide
@@ -66,7 +71,9 @@ Keyboard keys are indicated using rounded buttons.
 
 <button>Ctrl</button> <button>Alt</button> <button>Space</button> <button>Enter</button> <button>&uarr;</button>
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
+
+<br/>
 
 ## **Quick Start**
 
@@ -111,7 +118,10 @@ InternBuddy, and it is where your InternBuddy data file will be stored in.
 
 Do refer to [Features](#features) below for a comprehensive list of supported features and their associated details.
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
+
+<br/>
+
 ## **Exploring the Graphical User Interface**
 
 ![Graphical User Interface](images/gui-markup.png)
@@ -135,8 +145,10 @@ Do refer to [Features](#features) below for a comprehensive list of supported fe
 
 </div>
 
+<div style="page-break-after: always;"></div>
 
---------------------------------------------------------------------------------------------------------------------
+<br/>
+
 ## **Command Information**
 
 ### Notes about Commands and Parameters
@@ -260,7 +272,11 @@ Meanwhile, Internship C and Internship D are not considered duplicate internship
 | `COMMENT`      | NA                | NA               |
 | `TAGS`         | Java              | Java             |
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
+
+<br/>
+
+
 ## **Features**
 
 ### Listing all Internships : `list`
@@ -482,7 +498,9 @@ with the content in `internbuddy.json` unless you are confident in doing so. If 
 
 </div>
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
+
+<br/>
 
 ## **FAQ**
 
@@ -494,7 +512,10 @@ file `internbuddy.json` that is stored on your existing computer.
 **A**: Unfortunately, the current version of InternBuddy does not support the `undo` command. However, it is a feature
 that we are exploring and hope to implement in the future!
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
+
+<br/>
+
 ## **Command Summary**
 
 | Action                        | Format, Examples                                                                                                                    |
@@ -514,8 +535,10 @@ that we are exploring and hope to implement in the future!
 
 <p style="text-align: center;">Figure XX: Commands in InternBuddy</p>
 
+<div style="page-break-after: always;"></div>
 
---------------------------------------------------------------------------------------------------------------------
+<br/>
+
 ## **Appendix A: Installing Java 11**
 Follow the following steps to set up Java 11 in your computer.
 1. Open up a terminal on your computer.
@@ -529,7 +552,10 @@ Follow the following steps to set up Java 11 in your computer.
 3. If you do not have any versions of Java installed, or you have a version older than Java 11, download [Java 11](https://www.oracle.com/java/technologies/downloads/#java11) here.
    You may then return to Step 1 to check whether you have the correct version of Java installed.
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
+
+<br/>
+
 ## **Appendix B: Customising the Data File**
 If you are an advanced user of InternBuddy, you can directly edit the contents of your data through the `internbuddy.json`
 file without using the GUI.
@@ -578,8 +604,10 @@ read your data in `internbuddy.json` file and would restart with a new sample da
 5. Launch InternBuddy and you will see that your data have been updated accordingly.
 
 
+<div style="page-break-after: always;"></div>
 
---------------------------------------------------------------------------------------------------------------------
+<br/>
+
 
 ## **Glossary**
 
@@ -595,7 +623,6 @@ read your data in `internbuddy.json` file and would restart with a new sample da
 
 <p style="text-align: center;">Figure XX: Glossary for InternBuddy's User Guide</p>
 
---------------------------------------------------------------------------------------------------------------------
 ## **Acknowledgements**
 
 * InternBuddy is written in **Java 11**.
@@ -605,5 +632,3 @@ read your data in `internbuddy.json` file and would restart with a new sample da
   [JUnit5](https://github.com/junit-team/junit5) and [TestFX](https://github.com/TestFX/TestFX).
 * Other references: [AddressBook Level 4](https://github.com/se-edu/addressbook-level4)
   and [Please Hire Us](https://github.com/AY2223S1-CS2103T-W17-4/tp).
-
---------------------------------------------------------------------------------------------------------------------
