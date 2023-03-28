@@ -81,10 +81,9 @@ Keyboard keys are indicated using rounded buttons.
    :information_source: **Info:** If you are unsure of whether you have Java 11 installed, or need help installing
    it, you can refer to <a href="#appendix-a-installing-java-11">Appendix A</a>.
    </div>
-   <br/>
 2. Download the latest `internbuddy.jar` from [here](https://github.com/AY2223S2-CS2103T-T14-3/tp/releases).
 3. Copy the file `internbuddy.jar` to the folder you want to use as the _home folder_ for InternBuddy.
-   <br/>
+   <br/><br/>
    <div markdown="span" class="alert alert-primary">
    :information_source: **Info:** The home folder is the folder where you will navigate to in order to launch
    InternBuddy, and it is where your InternBuddy data file will be stored in.
@@ -323,7 +322,6 @@ Examples:
 
 <br/>
 
-<div style="page-break-after: always;"></div>
 
 ### Editing an Internship : `edit`
 
@@ -353,10 +351,7 @@ Examples:
 * `edit 2 c/` Sets the comment of the second internship entry to be `NA`.
 * `edit 2 t/` Removes all the tags of the second internship entry.
 
-<p align="center">
-  <img src="images/ug-edit-example.png" width="600" />
-</p>
-
+    ![Edit Command](images/ug-edit-example.png)
    <p style="text-align: center;">Figure 10: Example of the edit command in action</p>
 
 <br/>
@@ -571,8 +566,10 @@ Format: `help`
   user guide where you can view more detailed information about each command. Figure 15 shows how the Help Window looks like.
 * You can click on the <button>Copy URL</button> button to copy the link to your clipboard.
 
+<p align="center">
+  <img src="images/ug-help-window.png" width="650" />
+</p>
 
-![Help Command](images/ug-help-window.png)
    <p style="text-align: center;">Figure 15: Help Window</p>
 
 <br/>
@@ -714,7 +711,6 @@ The following steps outline how you can properly edit the `internbuddy.json` fil
    `Google`. Once your changes have been made, you can save the file by pressing <button>CTRL</button> + <button>S</button>.
    <br/><br/> 
    <div markdown="span" class="alert alert-danger">
-    
     :warning: **Warning:**  Make sure that you follow the [constraints](#descriptions-prefixes-and-constraints-for-parameters)
     when substituting in your own values. If the constraints are not satisfied, InternBuddy would not be able to
     read your data in `internbuddy.json` file and would restart with a new sample data file instead.
@@ -754,6 +750,7 @@ Follow the following steps to populate InternBuddy with sample data.
 4. You will be prompted to choose a folder to save the file in. Choose the [home folder](#quick-start) that
    you have chosen for InternBuddy.
 5. Click `Save`.
+    <br/><br/>
     <div markdown="span" class="alert alert-danger">
     :warning: **Warning:**  If you have an existing `internbuddy.json` file in the [home folder](#quick-start),
     you will be prompted to confirm whether you want to overwrite the existing file. Only overwrite if you
