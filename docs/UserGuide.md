@@ -76,19 +76,26 @@ Keyboard keys are indicated using rounded buttons.
 ## **Quick Start**
 
 1. Ensure you have Java `11` or above installed in your computer
+    <br/><br/>
    <div markdown="span" class="alert alert-primary">
    :information_source: **Info:** If you are unsure of whether you have Java 11 installed, or need help installing
    it, you can refer to <a href="#appendix-a-installing-java-11">Appendix A</a>.
    </div>
+   <br/>
 2. Download the latest `internbuddy.jar` from [here](https://github.com/AY2223S2-CS2103T-T14-3/tp/releases).
 3. Copy the file `internbuddy.jar` to the folder you want to use as the _home folder_ for InternBuddy.
+   <br/>
    <div markdown="span" class="alert alert-primary">
    :information_source: **Info:** The home folder is the folder where you will navigate to in order to launch
    InternBuddy, and it is where your InternBuddy data file will be stored in.
    </div>
+   <br/>
 4. Double-click on the file `internbuddy.jar` to launch InternBuddy. A GUI similar to Figure 1 should
    appear in a few seconds. Note how the app contains some sample data.<br/>
-   ![Ui](images/Ui.png)
+   <p align="center">
+    <img src="images/Ui.png" width="450" />
+    </p>
+
    <p style="text-align: center;">Figure 1: InternBuddy's GUI</p>
     <div style="page-break-after: always;"></div>
 5. You can interact with InternBuddy by typing into the box with the text `Enter command here...`, then pressing
@@ -259,8 +266,8 @@ and `ROLE` do not affect the comparison.
 
 <p style="text-align: center;">Figure 7: Duplicate internships</p>
 
-<div style="page-break-after: always;"></div>
 
+<div style="page-break-after: always;"></div>
 
 Meanwhile, as shown in Figure 8, internships C and D are not considered as duplicate internships, because
 they have different values for `COMPANY_NAME`.
@@ -338,7 +345,6 @@ to the internship only having the tag `macOS`. To have all 3 tags, you need to t
 
 </div>
 
-<div style="page-break-after: always;"></div>
 
 Examples:
 * `edit 2 s/Asessment r/Software Developer` Sets the status and role of the second internship entry as `Assessment` and `Software Developer` respectively. This example is illustrated in Figure 10.
@@ -347,8 +353,10 @@ Examples:
 * `edit 2 c/` Sets the comment of the second internship entry to be `NA`.
 * `edit 2 t/` Removes all the tags of the second internship entry.
 
+<p align="center">
+  <img src="images/ug-edit-example.png" width="600" />
+</p>
 
-![Edit Command](images/ug-edit-example.png)
    <p style="text-align: center;">Figure 10: Example of the edit command in action</p>
 
 <br/>
@@ -552,6 +560,8 @@ to [Appendix C](#appendix-c-populating-internbuddy-with-sample-data).
 
 </div>
 
+<div style="page-break-after: always;"></div>
+
 ### Getting Help : `help`
 Forgot the commands for InternBuddy? Fret not! You can easily view the list of supported commands and their formats
 using the `help` command.
@@ -573,6 +583,8 @@ Format: `help`
 devices as the functionality is dependent on Gnome libraries. If you are using a Linux device and
 the hyperlink does not work, you can click on the <Button>Copy URL</Button> button instead.
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Exiting InternBuddy : `exit`
 
@@ -676,7 +688,6 @@ If you are an advanced user of InternBuddy, you can directly edit the contents o
 file without using the GUI.
 
 <div markdown="span" class="alert alert-danger">
-
 :warning: **Warning:**  If you are new to InternBuddy or are not confident in reading JSON files, we would advise you against
 directly editing the `internbuddy.json` file. This is because if you accidentally make a mistake that leads to the JSON
 file not having the correct format, InternBuddy would restart with the sample data file, wiping out any data that you had
@@ -701,13 +712,15 @@ The following steps outline how you can properly edit the `internbuddy.json` fil
 4. To manually change the value of a parameter, simply replace the text for `VALUE`. Figure 18 illustrates an example
    where we change the value of `STATUS` from `assessment` to `interview` for the internship entry with company name
    `Google`. Once your changes have been made, you can save the file by pressing <button>CTRL</button> + <button>S</button>.
-    <div markdown="span" class="alert alert-danger">
+   <br/><br/> 
+   <div markdown="span" class="alert alert-danger">
     
     :warning: **Warning:**  Make sure that you follow the [constraints](#descriptions-prefixes-and-constraints-for-parameters)
     when substituting in your own values. If the constraints are not satisfied, InternBuddy would not be able to
     read your data in `internbuddy.json` file and would restart with a new sample data file instead.
     
     </div>
+    <br/>
 
     ![Editing the JSON File](images/ug-appendix-b-json-change.png)
        <p style="text-align: center;">Figure 18: Editing the JSON file</p>
@@ -728,7 +741,9 @@ Follow the following steps to populate InternBuddy with sample data.
    ![InternBuddy Sample Data](images/github-raw.png)
    <p style="text-align: center;">Figure 19: Raw button on GitHub interface</p>
     <br/>
+   
    <div style="page-break-after: always;"></div>
+   
 3. Your screen will look like Figure 20. Right click, then click on `Save As`.
    <p align="center">
     <img src="images/internbuddy-json-sample.png" width="300" />
