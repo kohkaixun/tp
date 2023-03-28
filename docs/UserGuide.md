@@ -27,8 +27,6 @@ InternBuddy runs using Java 11, and is available on the Windows, macOS and Linux
 
 <div style="page-break-after: always;"></div>
 
-
-
 ## **About the User Guide**
 
 ### Objectives of the User Guide
@@ -257,6 +255,9 @@ and `ROLE` do not affect the comparison.
 
 <p style="text-align: center;">Figure 7: Duplicate internships</p>
 
+<div style="page-break-after: always;"></div>
+
+
 Meanwhile, as shown in Figure 8, internships C and D are not considered as duplicate internships, because
 they have different values for `COMPANY_NAME`.
 
@@ -332,6 +333,8 @@ to the internship only having the tag `macOS`. To have all 3 tags, you need to t
 
 </div>
 
+<div style="page-break-after: always;"></div>
+
 Examples:
 * `edit 2 s/Asessment r/Software Developer` Sets the status and role of the second internship entry as `Assessment` and `Software Developer` respectively. This example is illustrated in Figure 10.
 * `edit 2` Displays an error because the command does not satisfy the criteria of having at least one optional parameter.
@@ -344,6 +347,8 @@ Examples:
    <p style="text-align: center;">Figure 10: Example of the edit command in action</p>
 
 <br/>
+
+<div style="page-break-after: always;"></div>
 
 
 ### Viewing an Internship : `view`
@@ -373,6 +378,9 @@ than the maximum index shown in the [List Panel](#exploring-the-graphical-user-i
 
 <br/>
 
+<div style="page-break-after: always;"></div>
+
+
 ### Copying an Internship to Clipboard : `copy`
 Need to quickly export the details of an internship? Use `copy` to copy the details of an internship to your
 clipboard.
@@ -392,6 +400,8 @@ Examples:
 * `copy 8` Assuming that you have 7 internships displayed in the
   [List Panel](#exploring-the-graphical-user-interface), this displays an error because `INDEX` cannot be greater
   than the maximum index shown in the [List Panel](#exploring-the-graphical-user-interface), which is 7 in this case.
+
+<div style="page-break-after: always;"></div>
 
   
 ### Finding Internships : `find`
@@ -628,20 +638,20 @@ that we are exploring and hope to implement in the future!
 ## **Command Summary**
 Figure 16 provides an overview of the commands supported in InternBuddy.
 
-| Action                        | Format, Examples                                                                                                                          |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| List                          | `list`                                                                                                                                    |
-| Add                           | `add n/COMPANY_NAME r/ROLE s/STATUS d/DATE [c/COMMENT] [t/TAG]...`  <br> e.g., `add n/Apple r/Software Engineer s/New d/2023-03-01`       |
-| Edit                          | `edit INDEX [n/NAME] [r/ROLE] [s/STATUS] [d/DATE] [c/COMMENT] [t/TAG]...`<br> e.g.,`edit 2 s/Assessment r/Software Developer`             |
-| View                          | `view INDEX`<br> e.g., `view 1`                                                                                                           |
-| Copy to Clipboard             | `copy INDEX`<br> e.g., `copy 1`                                                                                                           |
-| Find                          | `find [n/COMPANY_NAME]... [r/ROLE]... [s/STATUS]... [d/DATE]... [t/TAG]...`<br/>e.g., `find n/Apple n/Google`                             |
-| Get Upcoming Events/Deadlines | `upcoming`                                                                                                                                |
-| Delete by Index               | `delete-index INDEX [INDEX]...`<br> e.g., `delete 1 3`                                                                                    |
-| Delete by Parameters          | `delete-parameter [n/COMPANY_NAME]... [r/ROLE]... [s/STATUS]... [d/DATE]... [t/TAG]...`<br/>e.g., `find n/Apple n/Google s/New s/Applied` |
-| Clear                         | `clear`                                                                                                                                   |
-| Help                          | `help`                                                                                                                                    |
-| Exit                          | `exit`                                                                                                                                    |
+| Action                        | Format, Examples                                                                                                                                      |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| List                          | `list`                                                                                                                                                |
+| Add                           | `add n/COMPANY_NAME r/ROLE s/STATUS d/DATE [c/COMMENT] [t/TAG]...`  <br> e.g., `add n/Apple r/Software Engineer s/New d/2023-03-01`                   |
+| Edit                          | `edit INDEX [n/NAME] [r/ROLE] [s/STATUS] [d/DATE] [c/COMMENT] [t/TAG]...`<br> e.g.,`edit 2 s/Assessment r/Software Developer`                         |
+| View                          | `view INDEX`<br> e.g., `view 1`                                                                                                                       |
+| Copy to Clipboard             | `copy INDEX`<br> e.g., `copy 1`                                                                                                                       |
+| Find                          | `find [n/COMPANY_NAME]... [r/ROLE]... [s/STATUS]... [d/DATE]... [t/TAG]...`<br/>e.g., `find n/Apple n/Google`                                         |
+| Get Upcoming Events/Deadlines | `upcoming`                                                                                                                                            |
+| Delete by Index               | `delete-index INDEX [INDEX]...`<br> e.g., `delete 1 3`                                                                                                |
+| Delete by Parameters          | `delete-parameter [n/COMPANY_NAME]... [r/ROLE]... [s/STATUS]... [d/DATE]... [t/TAG]...`<br/>e.g., `delete-parameter n/Apple n/Google s/New s/Applied` |
+| Clear                         | `clear`                                                                                                                                               |
+| Help                          | `help`                                                                                                                                                |
+| Exit                          | `exit`                                                                                                                                                |
 
 
 <p style="text-align: center;">Figure 16: Commands in InternBuddy</p>
