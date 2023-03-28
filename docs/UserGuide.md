@@ -78,36 +78,24 @@ Keyboard keys are indicated using rounded buttons.
 ## **Quick Start**
 
 1. Ensure you have Java `11` or above installed in your computer
-<div markdown="span" class="alert alert-primary">
-
-:information_source: **Info:** If you are unsure of whether you have Java 11 installed, or need help installing
-it, you can refer to <a href="#appendix-a-installing-java-11">Appendix A</a>.
-
-</div>
-
-
+   <div markdown="span" class="alert alert-primary">
+   :information_source: **Info:** If you are unsure of whether you have Java 11 installed, or need help installing
+   it, you can refer to <a href="#appendix-a-installing-java-11">Appendix A</a>.
+   </div>
 2. Download the latest `internbuddy.jar` from [here](https://github.com/AY2223S2-CS2103T-T14-3/tp/releases).
-
 3. Copy the file `internbuddy.jar` to the folder you want to use as the _home folder_ for InternBuddy.
-<div markdown="span" class="alert alert-primary">
-
-:information_source: **Info:** The home folder is the folder where you will navigate to in order to launch
-InternBuddy, and it is where your InternBuddy data file will be stored in.
-
-</div>
-
+   <div markdown="span" class="alert alert-primary">
+   :information_source: **Info:** The home folder is the folder where you will navigate to in order to launch
+   InternBuddy, and it is where your InternBuddy data file will be stored in.
+   </div>
 4. Double-click on the file `internbuddy.jar` to launch InternBuddy. A GUI similar to Figure 1 should
-   appear in a few seconds. Note how the app contains some sample data.<br/><br/>
+   appear in a few seconds. Note how the app contains some sample data.<br/>
    ![Ui](images/Ui.png)
    <p style="text-align: center;">Figure 1: InternBuddy's GUI</p>
-
-<br/>
 
 5. You can interact with InternBuddy by typing into the box with the text `Enter command here...`, then pressing
    <button>Enter</button> to execute your command. For example, typing help and pressing <button>Enter</button> will open
    the help window.
-
-
 6. Here are some other example commands you can try:
 
     - `list`: List all internship entries stored in InternBuddy
@@ -118,11 +106,17 @@ InternBuddy, and it is where your InternBuddy data file will be stored in.
 
 Do refer to [Features](#features) below for a comprehensive list of supported features and their associated details.
 
+
+
+
 <div style="page-break-after: always;"></div>
 
 <br/>
 
 ## **Exploring the Graphical User Interface**
+Figure 2 provides a visual representation of the different parts of InternBuddy's GUI,  while
+Figure 3 explains what each part is used for.
+
 
 ![Graphical User Interface](images/gui-markup.png)
 <p style="text-align: center;">Figure 2: Different parts of InternBuddy's GUI</p>
@@ -154,28 +148,28 @@ Do refer to [Features](#features) below for a comprehensive list of supported fe
 ### Notes about Commands and Parameters
 
 * Words in `UPPER_CASE` are the parameters to be supplied by the user.<br>
-  e.g. If the command format is `add n/COMPANY_NAME`, you may input the command as `add n/Apple` where you supply the
+  e.g., If the command format is `add n/COMPANY_NAME`, you may input the command as `add n/Apple` where you supply the
   value `Apple` to the parameter `COMPANY_NAME`.
 
 * Items in square brackets are optional.<br>
-  e.g. If the command format is `edit INDEX [n/NAME] [c/COMMENT]`, you may input the command as `edit 2 n/Apple` where
+  e.g., If the command format is `edit INDEX [n/COMPANY_NAME] [c/COMMENT]`, you may input the command as `edit 2 n/Apple` where
   you omit the value for the parameter `COMMENT`.
 
 * Items with `…`​ after them can be used multiple times including zero times.<br>
-  e.g. `[t/TAG]…​` can be used as ` ` (i.e. 0 times), `t/friend`, `t/friend t/family` etc.
+  e.g., `[t/TAG]…​` can be used as ` ` (i.e. 0 times), `t/friend`, `t/friend t/family` etc.
 
 * Parameters can be in any order.<br>
-  e.g. If the command format is `n/NAME r/ROLE`, both `n/Apple r/Software Engineer` and `r/Software Engineer n/Apple`
+  e.g., If the command format is `n/COMPANY_NAME r/ROLE`, both `n/Apple r/Software Engineer` and `r/Software Engineer n/Apple`
   are acceptable.
 
 * If a parameter is expected only once in the command, but you specified it multiple times, only the last occurrence of
   the parameter will be taken.<br>
-  e.g. If the command format is `r/ROLE`, typing in `r/Front-end Developer r/Back-end Developer` will cause your
+  e.g., If the command format is `r/ROLE`, typing in `r/Front-end Developer r/Back-end Developer` will cause your
   input to be interpreted as `r/Back-end Developer`.
 
 * Extraneous parameters for commands that do not take in parameters (such as `help`, `list`, and `exit`) will be
   ignored.<br>
-  e.g. If the command format is `help`, typing in `help 123` will cause your input to be interpreted as `help`.
+  e.g., If the command format is `help`, typing in `help 123` will cause your input to be interpreted as `help`.
 
 
 ### Descriptions, Prefixes and Constraints for Parameters
@@ -193,15 +187,15 @@ There are 2 important things that you should note:
 
 Figure 4 provides a summary of the parameters with their descriptions, prefixes and constraints.
 
-| Parameter      | Description                                                                    | Prefix | Constraints                                                                                                                                             |
-|----------------|--------------------------------------------------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `COMPANY_NAME` | The name of the company                                                        | `n/`   | Cannot be blank and must be at most 50 characters                                                                                                       |
-| `ROLE`         | The role that you applied for                                                  | `r/`   | Cannot be blank and must be at most 50 characters                                                                                                       |
-| `STATUS`       | The status of the internship application                                       | `s/`   | Must be one of the following: `New`, `Applied`, `Assessment`, `Interview`, `Offered`, `Accepted`, `Rejected`. Note that this is **not** case-sensitive. |
-| `DATE`         | The date associated with the internship application                            | `d/`   | Must be a valid date in the format `YYYY-MM-DD `                                                                                                        |
-| `COMMENT`      | A comment that you can make on an internship application                       | `c/`   | Cannot be blank                                                                                                                                         |
-| `TAG`          | A label that you can give to an internship application                         | `t/`   | Cannot be blank and must be at most 30 characters                                                                                                       |
-| `INDEX`        | The index number of the internship entry as displayed in the List Panel        | -      | A positive integer that is smaller than or equal to the largest index number shown in the List Panel. Note that 0 is not a positive integer.            |
+| Parameter      | Description                                                                                                        | Prefix | Constraints                                                                                                                                             |
+|----------------|--------------------------------------------------------------------------------------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `COMPANY_NAME` | The name of the company                                                                                            | `n/`   | Cannot be blank and must be at most 50 characters.                                                                                                      |
+| `ROLE`         | The role that you applied for                                                                                      | `r/`   | Cannot be blank and must be at most 50 characters.                                                                                                      |
+| `STATUS`       | The status of the internship application                                                                           | `s/`   | Must be one of the following: `New`, `Applied`, `Assessment`, `Interview`, `Offered`, `Accepted`, `Rejected`. Note that this is **not** case-sensitive. |
+| `DATE`         | The date associated with the internship application                                                                | `d/`   | Must be a valid date in the format `YYYY-MM-DD`.                                                                                                        |
+| `COMMENT`      | A comment that you can make on an internship application                                                           | `c/`   | Cannot be blank.                                                                                                                                        |
+| `TAG`          | A label that you can give to an internship application                                                             | `t/`   | Cannot be blank and must be at most 30 characters.                                                                                                      |
+| `INDEX`        | The index number of the internship entry as displayed in the [List Panel](#exploring-the-graphical-user-interface) | -      | A positive integer that is smaller than or equal to the largest index number shown in the List Panel. Note that 0 is not a positive integer.            |
 
 <p style="text-align: center;">Figure 4: Parameters with their descriptions, prefixes and constraints</p>
 
@@ -211,15 +205,15 @@ of the following values: `New`, `Applied`, `Assessment`, `Interview`, `Offered`,
 Note that this is not case-sensitive. Figure 5 explains the meaning of each status.
 
 
-| `STATUS` | Description                                                                                                                       |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| `New`             | You have recently saw this internship opportunity and would like to record it in InternBuddy. Also, you have yet to apply for it. |
-| `Applied`         | You have applied for this internship opportunity and you are currently waiting for the company's response.                        |
-| `Assessment`      | You are currently in the technical assessment stage of the application process.                                                   |
-| `Interview`       | You are currently in the behavioral interview stage of the application process.                                                   |
-| `Offered`         | You have been offered the internship opportunity.                                                                                 |
-| `Accepted`        | You have accepted the internship opportunity.                                                                                     |
-| `Rejected`        | You have either been rejected by the company, or that you have rejected the internshop offer.                                     |
+| `STATUS`     | Description                                                                                                                       |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| `New`        | You have recently saw this internship opportunity and would like to record it in InternBuddy. Also, you have yet to apply for it. |
+| `Applied`    | You have applied for this internship opportunity and you are currently waiting for the company's response.                        |
+| `Assessment` | You are currently in the technical assessment stage of the application process.                                                   |
+| `Interview`  | You are currently in the behavioral interview stage of the application process.                                                   |
+| `Offered`    | You have been offered the internship opportunity.                                                                                 |
+| `Accepted`   | You have accepted the internship opportunity.                                                                                     |
+| `Rejected`   | You have either been rejected by the company, or that you have rejected the internshop offer.                                     |
 
 <p style="text-align: center;">Figure 5: Description of statuses</p>
 
@@ -247,7 +241,7 @@ a duplicate internship, InternBuddy will remind you that the internship already 
 2 internships are considered to be duplicates if they have matching `COMPANY_NAME`, `STATUS`,`ROLE` **and**
 `DATE`. The comparison is case-insensitive. Do refer to Figures XX and XX for illustrative examples.
 
-In Figure XX, internships A and B are considered as duplicate internships, because they have the same
+In Figure 7, internships A and B are considered as duplicate internships, because they have the same
 `COMPANY_NAME`, `STATUS`, `DATE` **and** `ROLE`. Note how the capitalization differences in `COMPANY_NAME`
 and `ROLE` do not affect the comparison.
 
@@ -261,9 +255,9 @@ and `ROLE` do not affect the comparison.
 | `COMMENT`      | NA                | NA                |
 | `TAGS`         | C++               | Java              |
 
-<p style="text-align: center;">Figure XX: Duplicate internships</p>
+<p style="text-align: center;">Figure 7: Duplicate internships</p>
 
-Meanwhile, as shown in Figure XX, internships C and D are not considered as duplicate internships, because
+Meanwhile, as shown in Figure 8, internships C and D are not considered as duplicate internships, because
 they have different values for `COMPANY_NAME`.
 
 
@@ -276,7 +270,7 @@ they have different values for `COMPANY_NAME`.
 | `COMMENT`      | NA                | NA                |
 | `TAGS`         | Java              | Java              |
 
-<p style="text-align: center;">Figure XX: Non-duplicate internships</p>
+<p style="text-align: center;">Figure 8: Non-duplicate internships</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -303,43 +297,53 @@ Format: `add n/COMPANY_NAME r/ROLE s/STATUS d/DATE [c/COMMENT] [t/TAG]...`
   will be no tags associated with the newly added internship.
 
 Examples:
+* `add n/Food Panda r/Web Developer s/New d/2023-02-01 c/I love Food Panda! t/React t/Front-end` Adds a new internship entry
+  with company name `Food Panda`, role `Web Developer`, status `New`, deadline of application `2023-02-01`,
+  comment `I love Food Panda` and tags `React` and `Front-End`. This example is illustrated in Figure 9.
 * `add n/Deliveroo r/Software Engineer s/Assessment d/2023-02-01` Adds a new internship entry with
   company name `Deliveroo`, role `Software Engineer`, status `Assessment` and date of technical assessment
   `2023-02-01`.
-* `add n/Food Panda r/Web Developer s/New d/2023-02-01 c/I love Food Panda! t/React t/Front-end` Adds a new internship entry
-  with company name `Food Panda`, role `Web Developer`, status `New`, deadline of application `2023-02-01`,
-  comment `I love Food Panda` and tags `React` and `Front-End`.
 * `add n/Food Panda s/new d/2023-02-01` Displays an error because the `ROLE` parameter is missing.
 
 
 ![Add Command](images/ug-add-example.png)
-   <p style="text-align: center;">Figure XX: Example of the add command in action</p>
+   <p style="text-align: center;">Figure 9: Example of the add command in action</p>
 
 <br/>
 
 
 ### Editing an Internship : `edit`
 
-Made a mistake, or wish to update your internship entry? The `edit` command modifies an internship entry from your list of existing entries.
+Made a mistake, or wish to update your internship entry? The `edit` command allows you to make modifications.
 
-Format: `edit INDEX [n/COMPANY_NAME] [r/ROLE] [s/STATUS ] [d/DATE] [c/COMMENT] [t/TAG]...`
+Format: `edit INDEX [n/COMPANY_NAME] [r/ROLE] [s/STATUS] [d/DATE] [c/COMMENT] [t/TAG]...`
 
-* The internship entry whose entry number is `INDEX` would be updated. `INDEX` needs to be a valid entry number as specified in the [List Panel](#exploring-the-graphical-user-interface)  displayed using the `list` command.
-* You have to provide at least one of the optional parameters
-* You can remove all of an internship’s tags by typing `t/` without specifying any other tags after it. 
+* Edits the internship whose index number is `INDEX`.
+* You have to provide at least one of the optional parameters.
 * You can reset the comment of an internship to the default value of `NA` by typing `c/` without specifying any comments after it.
+* You can remove all of an internship’s tags by typing `t/` without specifying any other tags after it.
+
 
 <div markdown="span" class="alert alert-danger">
 
-:warning: **Warning:**  When editing tags, the existing tags of the internship will be removed i.e adding of tags is not cumulative.
+:warning: **Warning:**  When editing tags, the existing tags of the internship will be removed. For example, if the
+internship with index 1 currently has the tags `iOS` and `Swift`, editing the internship via `edit 1 t/macOS` will lead
+to the internship only having the tag `macOS`. To have all 3 tags, you need to type `edit 1 t/iOS t/Swift t/macOS`.
 
 </div>
 
 Examples:
-* `edit 2 s/assessment r/Software Developer` Sets the status and role of the second internship entry as `Assessment` and `Software Developer` respectively.
+* `edit 2 s/Asessment r/Software Developer` Sets the status and role of the second internship entry as `Assessment` and `Software Developer` respectively. This example is illustrated in Figure 10.
 * `edit 2` Displays an error because the command does not satisfy the criteria of having at least one optional parameter.
-* `edit 2 t/Java t/Go` Sets the tags of the second internship entry as Java and Go. (Existing tags will be removed)
+* `edit 2 t/Java t/Go` Sets the tags of the second internship entry as Java and Go (existing tags will be removed).
+* `edit 2 c/` Sets the comment of the second internship entry to be `NA`.
 * `edit 2 t/` Removes all the tags of the second internship entry.
+
+
+![Edit Command](images/ug-edit-example.png)
+   <p style="text-align: center;">Figure 10: Example of the edit command in action</p>
+
+<br/>
 
 
 ### Viewing an Internship : `view`
@@ -354,9 +358,9 @@ Format: `view INDEX`
 internship entry.
 
 Examples:
-* `view 1` Assuming that you have at least three internships displayed in the
+* `view 3` Assuming that you have at least three internships displayed in the
 [List Panel](#exploring-the-graphical-user-interface), this displays the details of the third internship in the
-[View Panel](#exploring-the-graphical-user-interface).
+[View Panel](#exploring-the-graphical-user-interface). This example is illustrated in Figure 11.
 * `view -1` Displays an error because `INDEX` must be a positive integer.
 * `view 8` Assuming that you have 7 internships displayed in the
 [List Panel](#exploring-the-graphical-user-interface), this displays an error because `INDEX` cannot be greater
@@ -365,33 +369,75 @@ than the maximum index shown in the [List Panel](#exploring-the-graphical-user-i
 
 
 ![View Command](images/ug-view-example.png)
-   <p style="text-align: center;">Figure XX: Example of the view command in action</p>
+   <p style="text-align: center;">Figure 11: Example of the view command in action</p>
 
 <br/>
 
 ### Copying an Internship to Clipboard : `copy`
-[TODO by Chuhao]
+Need to quickly export the details of an internship? Use `copy` to copy the details of an internship to your
+clipboard.
 
-### Finding Internships : `find`
-Are you an experienced internship hunter with tons of internship entries? Our `find` command will help filter through all your internship entries and return the internship entries you're looking for.
+Format: `copy INDEX`
+* Copies the details of the internship entry with index number `INDEX` as indicated in
+  the [List Panel](#exploring-the-graphical-user-interface).
+* The copied text will be in the format of
+`COMPANY_NAME; Role: ROLE; Status: STATUS, Date: DATE; Comment: [COMMENT]; Tags:  [TAG]`
 
-Format: `find [n/COMPANY_NAME] [r/ROLE] [s/STATUS ] [d/DATE] [c/COMMENT] [t/TAG]...`
-
-* You have to provide at least one of the optional parameters. A `find` command without any parameters will result in an invalid command format error.
-* The find command works through an exact match, regardless of upper or lower case, of the parameter and the internship entry's corresponding attributes.
-* When multiple instances of the same type of field exists in user input (e.g. multiple `n/COMPANY_NAME` fields or multiple `r/ROLE` fields), only internships containing at least one of these fields of the same type will be filtered out.
-* When different types of fields, each with multiple instances, exist in user input (e.g. multiple `n/COMPANY_NAME` and multiple `r/ROLE` fields), only internships containing at least one of the inputs from every different type of field will be filtered out. 
-
+  
 Examples:
-* `find n/Google Ltd` filters out all internships with company name 'Google Ltd'. Note that case matching is insensitive, so internships with the company name 'google ltd', 'gOOglE ltD' or more will also be deleted. However, matching must be exact, so inputs like 'goo' and 'google' will not filter out an internship with company name 'Google Ltd'.
-* `find n/Google n/Apple n/Meta` filters out all internships with company name 'Google', 'Apple' or 'Meta'.
-* `find n/Google n/Apple s/new` filters out all internships that has the `new` status and have company name 'Google' or 'Apple'.
-* `find n/Google n/Apple t/Python t/Java` filters out all internships with company names 'Google' or 'Apple' and have the tags 'Python' or 'Java'.
+* `copy 2` Assuming that you have at least three internships displayed in the
+  [List Panel](#exploring-the-graphical-user-interface), this copies the details of the
+  third internship to your clipboard.
+* `view -1` Displays an error because `INDEX` must be a positive integer.
+* `copy 8` Assuming that you have 7 internships displayed in the
+  [List Panel](#exploring-the-graphical-user-interface), this displays an error because `INDEX` cannot be greater
+  than the maximum index shown in the [List Panel](#exploring-the-graphical-user-interface), which is 7 in this case.
+
+  
+### Finding Internships : `find`
+Want to locate selected internship entries? Use the `find` command to filter through
+your entries and narrow down your search.
+
+
+Format: `find [n/COMPANY_NAME]... [r/ROLE]... [s/STATUS]... [d/DATE]... [t/TAG]...`
+
+* You have to provide at least one of the optional parameters.
+* The `find` command is case-insensitive, and it returns exact matches only. For example,
+  `find n/Google Ltd` will not return an entry with company name `Google` because `Google`
+  does not exactly match with `Google Ltd`.
+
+There are 2 possible ways for you to use the `find` command.
+
+**Method 1: Use a single parameter type**
+
+e.g., `find s/Applied`, `find s/Applied s/New`, `find n/Google n/Apple n/Meta`
+
+* The `find` command returns all internship entries that match with **any** of the values that you provide.
+* For example, `find s/Applied s/New` returns all internship entries that have a status of **either**
+  `Applied` **or** `New`.
+
+
+
+**Method 2: Use 2 or more different parameter types**
+
+e.g., `find n/Google n/Apple s/New`, `find n/Google n/Apple s/Applied s/New`, `find n/Google r/Engineer t/Python t/Java`
+
+* The `find` command returns all internship entries that matches with **at least one** value for
+  **every** parameter type that is specified.
+* For example, `find n/Google n/Apple s/new` returns internship entries that have a status `New` and have
+  a company name of `Google` **or** `Apple`.
+* Another example is that `find n/Google n/Apple s/Applied s/New` returns internship entries that have company names
+  of `Google` **or** `Apple` **and** roles of `Applied` **or** `New`.
 
 
 
 ![Find Command](images/ug-find-example.png)
-   <p style="text-align: center;">Figure XX: Example of the find command in action</p>
+   <p style="text-align: center;">Figure 12: Example of the find command in action</p>
+
+
+
+
+
 
 ### Getting Upcoming Events and Deadlines : `upcoming`
 Want to view your upcoming events and deadlines? You can do so using the `upcoming` command.
@@ -406,44 +452,99 @@ Examples:
 * `upcoming` If today's date is 5 January 2023, it will list all internships that have a `STATUS`of `NEW/OFFERED/ASSESSMENT/INTERVIEW` and `DATE` is from 5 January 2023 to 11 January 2023 inclusive.
 
 
+### Deleting Internships by Index : `delete-index`
+Having multiple internships that you wish to quickly delete using their indices? You can achieve this
+via the `delete-index` command.
 
-### Deleting Internships : `delete`
-The `delete` command can delete multiple internships quickly, keeping your screen nice and tidy. There are 2 formats of the `delete` command.
+Format: `delete-index INDEX [INDEX]...`
 
-Format 1: `delete INDEX ...`
-* Deletes an internship at the index specified by the `list` or `find` command.
+* Deletes the internship whose index number is `INDEX`.
 * If multiple `INDEX` are provided, multiple internships can be deleted.
-* `INDEX` must be an integer greater than or equal to 1, as explained in [Figure 4](#descriptions-prefixes-and-constraints-for-parameters).
-* At least 1 `INDEX` must be provided.
+
+
 
 Examples:
-* `delete 1` Assuming that you have at least one internship displayed in the
-[List Panel](#exploring-the-graphical-user-interface), this command deletes the first internship in the List Panel.
-* `delete 1 3` Assuming that you have at least three internship displayed in the
-[List Panel](#exploring-the-graphical-user-interface), this command deletes the first and third internships in the List Panel.
-* If you run `delete 1` after `find` and not `list`, it will delete the first entry as displayed by  `find`, not `list`. Likewise, if you run `delete 1` after `list`, it will delete the first entry as displayed by `list`.
+* `delete-index 1` Assuming that you have at least one internship displayed in the
+  [List Panel](#exploring-the-graphical-user-interface), this deletes the first
+  internship in the [List Panel](#exploring-the-graphical-user-interface).
+* `delete-index 1 3` Assuming that you have at least three internships displayed in the
+  [List Panel](#exploring-the-graphical-user-interface), this deletes the first and third
+  internship in the [List Panel](#exploring-the-graphical-user-interface).
+* `delete-index` Displays an error because at least one `INDEX` must be specified.
 
 ![Delete Command](images/ug-delete-example.png)
-   <p style="text-align: center;">Figure XX: Example of the delete command in action</p>
+   <p style="text-align: center;">Figure 13: Example of the delete-index command in action</p>
 
-Format 2: `delete [n/COMPANY_NAME] [r/ROLE] [s/STATUS] [d/DATE]`
-* Deletes all internships in the current display list that matches all the parameters.
-* At least 1 parameter must be provided, and at most one of each parameter (`COMPANY_NAME`, `ROLE`, `STATUS`, `DATE`) can be provided.
 
-Examples:
-* `delete` Displays an error because no parameters are provided
-* `delete n/Google` Deletes all internships with the company name 'google'. Note that case matching is insensitive, so internships with the company name 'Google' or 'gOOgle' will be deleted. However, matching must be exact.
-* `delete n/Google r/software engineer` Deletes all internship with the company name 'google' **AND** the role 'software engineer'. Internships that do not fulfil both conditions will not be deleted. For example, the internship with company name 'google' and role as 'data engineer' will not be deleted. 
+
+### Deleting Internships by Parameters : `delete-parameter`
+Wishing that you could delete internships using parameters instead of indices? You can
+certainly do so using `delete-parameter`.
+
+Format: `delete-parameter [n/COMPANY_NAME]... [r/ROLE]... [s/STATUS]... [d/DATE]... [t/TAG]...`
+
+* You have to provide at least one of the optional parameters.
+* The `delete` command is case-insensitive, and it deletes entries with exact matches only.
+  For example, `delete n/Google Ltd` will not delete an entry with company name `Google` because
+  `Google` does not exactly match with `Google Ltd`.
+
+There are 2 possible ways for you to use the `delete` command.
+
+**Method 1: Use a single parameter type**
+
+e.g., `delete-parameter s/Applied`, `delete-parameter s/Applied s/New`,
+`delete-parameter n/Google n/Apple n/Meta`
+
+* The `delete-parameter` command deletes all internship entries that match with **any** of the values that you provide.
+* For example, `delete-parameter s/Applied s/New` deletes all internship entries that have a status of **either**
+  `Applied` **or** `New`.
+
+
+**Method 2: Use 2 or more different parameter types**
+
+e.g., `delete-parameter n/Google n/Apple s/New`, `delete-parameter n/Google n/Apple s/Applied s/New`,
+`delete-parameter n/Google r/Engineer t/Python t/Java`
+
+* The `delete-parameter` command deletes all internship entries that matches with **at least one** value for
+  **every** parameter type that is specified.
+* For example, `delete-parameter n/Google n/Apple s/new` delete internship entries that have a status `New` and have
+  a company name of `Google` **or** `Apple`.
+* Another example is that `delete-parameter n/Google n/Apple s/Applied s/New` deletes internship entries that have company names
+  of `Google` **or** `Apple` **and** roles of `Applied` **or** `New`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Clearing all Internships : `clear`
-The `clear` command deletes all entries permanently from InternBuddy.
+The `clear` command permanently deletes all entries from InternBuddy.
 
 Format: `clear`
 
 Example:
-![Clear Command](images/ug-clear-example.png)
-   <p style="text-align: center;">Figure XX: Example of the clear command in action</p>
+- `clear` Deletes all entries currently stored in InternBuddy. This example is illustrated in Figure 14.
 
+
+![Clear Command](images/ug-clear-example.png)
+   <p style="text-align: center;">Figure 14: Example of the clear command in action</p>
+
+<div markdown="span" class="alert alert-danger">
+
+:warning: **Warning:**  It would be good to think twice before running this command because
+once you run this command, all your internship data will be deleted.
+
+</div>
 
 ### Getting Help : `help`
 Forgot the commands for InternBuddy? Fret not! You can easily view the list of supported commands and their formats
@@ -524,19 +625,20 @@ that we are exploring and hope to implement in the future!
 
 ## **Command Summary**
 
-| Action                        | Format, Examples                                                                                                                    |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| List                          | `list`                                                                                                                              |
-| Add                           | `add n/COMPANY_NAME r/ROLE s/STATUS d/DATE [c/COMMENT] [t/TAG]...`  <br> e.g., `add n/Apple r/Software Engineer s/New d/2023-03-01` |
-| Edit                          | `edit INDEX [n/NAME] [r/ROLE] [s/STATUS] [d/DATE] [c/COMMENT] [t/TAG]...`<br> e.g.,`edit 2 s/Assessment r/Software Developer`       |
-| View                          | `view INDEX`<br> e.g., `view 1`                                                                                                     |
-| Copy to Clipboard             | `copy INDEX`<br> e.g., `copy 1`                                                                                                     |
-| Find                          | `find [n/COMPANY_NAME]... [r/ROLE]... [s/STATUS]... [d/DATE]... [t/TAG]...`<br/>e.g., `find n/Apple n/Google`                       |
-| Get Upcoming Events/Deadlines | `upcoming`                                                                                                                          |
-| Delete                        | `delete INDEX`<br> e.g., `delete 3`                                                                                                 |
-| Clear                         | `clear`                                                                                                                             |
-| Help                          | `help`                                                                                                                              |
-| Exit                          | `exit`                                                                                                                              |
+| Action                        | Format, Examples                                                                                                                          |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| List                          | `list`                                                                                                                                    |
+| Add                           | `add n/COMPANY_NAME r/ROLE s/STATUS d/DATE [c/COMMENT] [t/TAG]...`  <br> e.g., `add n/Apple r/Software Engineer s/New d/2023-03-01`       |
+| Edit                          | `edit INDEX [n/NAME] [r/ROLE] [s/STATUS] [d/DATE] [c/COMMENT] [t/TAG]...`<br> e.g.,`edit 2 s/Assessment r/Software Developer`             |
+| View                          | `view INDEX`<br> e.g., `view 1`                                                                                                           |
+| Copy to Clipboard             | `copy INDEX`<br> e.g., `copy 1`                                                                                                           |
+| Find                          | `find [n/COMPANY_NAME]... [r/ROLE]... [s/STATUS]... [d/DATE]... [t/TAG]...`<br/>e.g., `find n/Apple n/Google`                             |
+| Get Upcoming Events/Deadlines | `upcoming`                                                                                                                                |
+| Delete by Index               | `delete-index INDEX [INDEX]...`<br> e.g., `delete 1 3`                                                                                    |
+| Delete by Parameters          | `delete-parameter [n/COMPANY_NAME]... [r/ROLE]... [s/STATUS]... [d/DATE]... [t/TAG]...`<br/>e.g., `find n/Apple n/Google s/New s/Applied` |
+| Clear                         | `clear`                                                                                                                                   |
+| Help                          | `help`                                                                                                                                    |
+| Exit                          | `exit`                                                                                                                                    |
 
 
 <p style="text-align: center;">Figure XX: Commands in InternBuddy</p>
@@ -614,6 +716,29 @@ read your data in `internbuddy.json` file and would restart with a new sample da
 
 <br/>
 
+
+## **Appendix C: Populating InternBuddy with Sample Data**
+Follow the following steps to populate InternBuddy with the default sample data.
+1. Visit this [link](https://github.com/AY2223S2-CS2103T-T14-3/tp/blob/master/internbuddy.json).
+2. In the top right corner, click the button labelled `Raw`. Figure XX shows where the `Raw` button is.
+
+3. Your screen will look like Figure XX. Right click, then click on `Save As`.
+4. You will be prompted to choose a folder to save the file in. Choose the [home folder](#quick-start) that
+   you have chosen for InternBuddy.
+
+
+
+5. Click `Save`.
+
+<div markdown="span" class="alert alert-danger">
+
+:warning: **Warning:**  If you have an existing `internbuddy.json` file in the [home folder](#quick-start),
+you will be prompted to confirm whether you want to overwrite the existing file. Only overwrite if you
+are sure that you do not need your old InternBuddy data anymore, and would like to populate InternBuddy with
+the sample data instead.
+</div>
+
+6. You are done! InternBuddy will be populated with the sample data the next time you launch it.
 
 ## **Glossary**
 

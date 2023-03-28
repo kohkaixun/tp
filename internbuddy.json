@@ -1,0 +1,52 @@
+{
+  "internships" : [ {
+    "companyName" : "Apple",
+    "role" : "iOS Developer",
+    "status" : "applied",
+    "date" : "2023-02-01",
+    "comment" : "Yay! My dream company!",
+    "tagged" : [ "iOS" ]
+  }, {
+    "companyName" : "Amazon",
+    "role" : "Cloud Architect",
+    "status" : "new",
+    "date" : "2023-02-02",
+    "comment" : "Need to research more on cloud services.",
+    "tagged" : [ "cloud services", "aws" ]
+  }, {
+    "companyName" : "Google",
+    "role" : "Software Engineer",
+    "status" : "assessment",
+    "date" : "2023-02-03",
+    "comment" : "Good company culture and environment.",
+    "tagged" : [ "golang", "backend" ]
+  }, {
+    "companyName" : "Samsung",
+    "role" : "Android Developer",
+    "status" : "interview",
+    "date" : "2023-02-02",
+    "comment" : "To compare with Apple's offer again.",
+    "tagged" : [ "android", "mobile" ]
+  }, {
+    "companyName" : "Grab",
+    "role" : "Frontend Designer",
+    "status" : "offered",
+    "date" : "2023-02-02",
+    "comment" : "Good benefits. Can consider.",
+    "tagged" : [ "css", "react" ]
+  }, {
+    "companyName" : "Paypal",
+    "role" : "Product Manager",
+    "status" : "accepted",
+    "date" : "2023-04-05",
+    "comment" : "Starting work on 1 May. Excited!",
+    "tagged" : [ "UX", "UI" ]
+  }, {
+    "companyName" : "Facebook",
+    "role" : "Backend Developer",
+    "status" : "rejected",
+    "date" : "2023-02-02",
+    "comment" : "Rejected since I lack proficiency in SQL.",
+    "tagged" : [ "sql" ]
+  } ]
+}
