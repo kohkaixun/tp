@@ -6,6 +6,8 @@ import static seedu.internship.commons.util.AppUtil.checkArgument;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import seedu.internship.logic.parser.ParserUtil;
 import seedu.internship.logic.parser.exceptions.ParseException;
@@ -90,6 +92,15 @@ public class StringUtil {
         try {
             value = Integer.parseInt(s);
         } catch (NumberFormatException nfe) {
+            String negIntRegex = "-\\d+";
+            String posIntRegex = "\\d+";
+
+            if (Pattern.matches(negIntRegex, s)) {
+                throw new ParseException(ParserUtil.MESSAGE_INVALID_INDEX);
+            } else if (Pattern.matches(posIntRegex, s)) {
+                throw new ParseException(ParserUtil.MESSAGE_OUT_OF_RANGE_INDEX);
+            }
+
             throw new ParseException(ParserUtil.MESSAGE_INVALID_INDEX_FORMAT);
         }
 
