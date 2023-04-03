@@ -24,7 +24,7 @@ public class CopyCommandParser implements Parser<CopyCommand> {
             index = ParserUtil.parseIndex(args);
             assert index.getZeroBased() > -1;
         } catch (ParseException pe) {
-            ParseException e = ParserUtil.handleIndexException(pe);
+            ParseException e = ParserUtil.handleIndexException(pe, CopyCommand.MESSAGE_USAGE);
             throw e;
         }
         return new CopyCommand(index);
