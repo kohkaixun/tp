@@ -1,6 +1,7 @@
 package seedu.internship.logic.parser;
 
 import static seedu.internship.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static seedu.internship.commons.core.Messages.MESSAGE_OUT_OF_RANGE_INTERNSHIP_DISPLAYED_INDEX;
 import static seedu.internship.logic.commands.CommandTestUtil.COMPANY_NAME_DESC_APPLE;
 import static seedu.internship.logic.commands.CommandTestUtil.DATE_DESC_APPLE;
 import static seedu.internship.logic.commands.CommandTestUtil.DATE_DESC_GOOGLE;
@@ -79,6 +80,12 @@ public class EditCommandParserTest {
 
         // integer with positive sign
         assertParseFailure(parser, "+10", MESSAGE_INVALID_FORMAT);
+
+        // negative overflow integer
+        assertParseFailure(parser, "-9999999999", MESSAGE_INVALID_INDEX);
+
+        // positive overflow integer
+        assertParseFailure(parser, "9999999999", MESSAGE_OUT_OF_RANGE_INTERNSHIP_DISPLAYED_INDEX);
 
         // invalid arguments being parsed as preamble
         assertParseFailure(parser, "1 some random string", MESSAGE_INVALID_FORMAT);
