@@ -3,6 +3,7 @@ package seedu.internship.logic.parser;
 import static seedu.internship.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static seedu.internship.commons.core.Messages.MESSAGE_INVALID_INTERNSHIP_DISPLAYED_INDEX;
 import static seedu.internship.commons.core.Messages.MESSAGE_MISSING_ARGUMENTS;
+import static seedu.internship.commons.core.Messages.MESSAGE_OUT_OF_RANGE_INTERNSHIP_DISPLAYED_INDEX;
 import static seedu.internship.logic.commands.CommandTestUtil.MULTIPLE_INDEX_LIST;
 import static seedu.internship.logic.commands.CommandTestUtil.NON_EMPTY_INDEXLIST;
 import static seedu.internship.logic.parser.CommandParserTestUtil.assertParseFailure;
@@ -59,5 +60,15 @@ public class DeleteIndexCommandParserTest {
     @Test
     public void parse_invalidIndex_throwsParseException() {
         assertParseFailure(parser, "-1", MESSAGE_INVALID_INTERNSHIP_DISPLAYED_INDEX);
+    }
+
+    @Test
+    public void parse_negativeIndexOverflow_throwsParseException() {
+        assertParseFailure(parser, "-9999999999", MESSAGE_INVALID_INTERNSHIP_DISPLAYED_INDEX);
+    }
+
+    @Test
+    public void parse_positiveIndexOverflow_throwsParseException() {
+        assertParseFailure(parser, "9999999999", MESSAGE_OUT_OF_RANGE_INTERNSHIP_DISPLAYED_INDEX);
     }
 }
