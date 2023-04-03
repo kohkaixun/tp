@@ -3,6 +3,8 @@ package seedu.internship.logic.parser;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.internship.logic.parser.ParserUtil.MESSAGE_INVALID_INDEX;
+import static seedu.internship.logic.parser.ParserUtil.MESSAGE_INVALID_INDEX_FORMAT;
+import static seedu.internship.logic.parser.ParserUtil.MESSAGE_OUT_OF_RANGE_INDEX;
 import static seedu.internship.testutil.Assert.assertThrows;
 import static seedu.internship.testutil.TypicalIndexes.INDEX_FIRST_INTERNSHIP;
 
@@ -48,6 +50,22 @@ public class ParserUtilTest {
     public void parseIndex_outOfRangeInput_throwsParseException() {
         assertThrows(ParseException.class, MESSAGE_INVALID_INDEX, ()
             -> ParserUtil.parseIndex(Long.toString(Integer.MAX_VALUE + 1)));
+    }
+
+    @Test
+    public void parseIndex_negativeIndexOverflowInput_throwsParseException() {
+        assertThrows(ParseException.class, MESSAGE_INVALID_INDEX, ()
+                -> ParserUtil.parseIndex("-9999999999"));
+    }
+
+    @Test
+    public void parseIndex_positiveIndexOverflowInput_throwsParseException() {
+        assertThrows(ParseException.class, MESSAGE_OUT_OF_RANGE_INDEX, ()
+                -> ParserUtil.parseIndex("9999999999"));
+
+        // Positive integer overflow but with "+" sign in front
+        assertThrows(ParseException.class, MESSAGE_INVALID_INDEX_FORMAT, ()
+                -> ParserUtil.parseIndex("+9999999999"));
     }
 
     @Test
