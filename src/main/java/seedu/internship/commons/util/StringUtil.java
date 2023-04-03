@@ -6,7 +6,6 @@ import static seedu.internship.commons.util.AppUtil.checkArgument;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Arrays;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import seedu.internship.logic.parser.ParserUtil;

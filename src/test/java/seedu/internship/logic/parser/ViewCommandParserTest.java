@@ -9,7 +9,6 @@ import static seedu.internship.testutil.TypicalIndexes.INDEX_FIRST_INTERNSHIP;
 
 import org.junit.jupiter.api.Test;
 
-import seedu.internship.logic.commands.CopyCommand;
 import seedu.internship.logic.commands.ViewCommand;
 
 /**
