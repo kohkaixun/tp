@@ -28,6 +28,7 @@ public class ParserUtil {
     public static final String MESSAGE_INVALID_INDEX = "Index is smaller than 1.";
     public static final String MESSAGE_INVALID_POSITIVE_SIGNED_INDEX = "Index has positive sign.";
     public static final String MESSAGE_INVALID_INDEX_FORMAT = "Index is not an integer.";
+    public static final String MESSAGE_OUT_OF_RANGE_INDEX = "Index is out of range.";
 
     /**
      * Parses {@code oneBasedIndex} into an {@code Index} and returns it. Leading and trailing whitespaces will be
