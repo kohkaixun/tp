@@ -53,6 +53,12 @@ public class StringUtilTest {
         // EP: valid numbers, should return true
         this.nonZeroUnsignedIntegerCheckAssertPass("1"); // Boundary value
         this.nonZeroUnsignedIntegerCheckAssertPass("10");
+
+        // EP: positive overflow integers
+        this.nonZeroUnsignedIntegerCheckAssertFail("9999999999", ParserUtil.MESSAGE_OUT_OF_RANGE_INDEX);
+
+        // EP: negative overflow integers
+        this.nonZeroUnsignedIntegerCheckAssertFail("-9999999999", ParserUtil.MESSAGE_INVALID_INDEX);
     }
 
     private static void nonZeroUnsignedIntegerCheckAssertPass(String input) {
