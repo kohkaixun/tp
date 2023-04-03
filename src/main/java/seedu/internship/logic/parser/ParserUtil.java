@@ -3,6 +3,7 @@ package seedu.internship.logic.parser;
 import static java.util.Objects.requireNonNull;
 import static seedu.internship.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static seedu.internship.commons.core.Messages.MESSAGE_INVALID_INTERNSHIP_DISPLAYED_INDEX;
+import static seedu.internship.commons.core.Messages.MESSAGE_OUT_OF_RANGE_INTERNSHIP_DISPLAYED_INDEX;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -75,7 +76,7 @@ public class ParserUtil {
         if (pe.getMessage().equals(ParserUtil.MESSAGE_INVALID_INDEX)) {
             return new ParseException(MESSAGE_INVALID_INTERNSHIP_DISPLAYED_INDEX);
         } else if (pe.getMessage().equals(ParserUtil.MESSAGE_OUT_OF_RANGE_INDEX)) {
-            return new ParseException(MESSAGE_OUT_OF_RANGE_INDEX);
+            return new ParseException(MESSAGE_OUT_OF_RANGE_INTERNSHIP_DISPLAYED_INDEX);
         }
 
         return new ParseException(

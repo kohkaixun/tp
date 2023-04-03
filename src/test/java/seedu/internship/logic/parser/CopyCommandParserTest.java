@@ -2,6 +2,7 @@ package seedu.internship.logic.parser;
 
 import static seedu.internship.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static seedu.internship.commons.core.Messages.MESSAGE_INVALID_INTERNSHIP_DISPLAYED_INDEX;
+import static seedu.internship.commons.core.Messages.MESSAGE_OUT_OF_RANGE_INTERNSHIP_DISPLAYED_INDEX;
 import static seedu.internship.logic.parser.CommandParserTestUtil.assertParseFailure;
 import static seedu.internship.logic.parser.CommandParserTestUtil.assertParseSuccess;
 import static seedu.internship.testutil.TypicalIndexes.INDEX_FIRST_INTERNSHIP;
@@ -30,10 +31,28 @@ public class CopyCommandParserTest {
     public void parse_invalidArgs_throwsParseException() {
         assertParseFailure(parser, "a", String.format(MESSAGE_INVALID_COMMAND_FORMAT,
                 CopyCommand.MESSAGE_USAGE));
+
+        // Valid index with "+" sign in front
+        assertParseFailure(parser, "+10", String.format(MESSAGE_INVALID_COMMAND_FORMAT,
+                CopyCommand.MESSAGE_USAGE));
+
+        // Positive integer overflow with "+" sign in front
+        assertParseFailure(parser, "+9999999999", String.format(MESSAGE_INVALID_COMMAND_FORMAT,
+                CopyCommand.MESSAGE_USAGE));
     }
 
     @Test
     public void parse_invalidIndex_throwsParseException() {
         assertParseFailure(parser, "-1", MESSAGE_INVALID_INTERNSHIP_DISPLAYED_INDEX);
+    }
+
+    @Test
+    public void parse_negativeIndexOverflow_throwsParseException() {
+        assertParseFailure(parser, "-9999999999", MESSAGE_INVALID_INTERNSHIP_DISPLAYED_INDEX);
+    }
+
+    @Test
+    public void parse_positiveIndexOverflow_throwsParseException() {
+        assertParseFailure(parser, "9999999999", MESSAGE_OUT_OF_RANGE_INTERNSHIP_DISPLAYED_INDEX);
     }
 }
