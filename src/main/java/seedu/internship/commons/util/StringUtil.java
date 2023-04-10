@@ -91,15 +91,20 @@ public class StringUtil {
         try {
             value = Integer.parseInt(s);
         } catch (NumberFormatException nfe) {
-            String negIntRegex = "-\\d+";
-            String posIntRegex = "\\d+";
+            // NumberFormatException has been thrown
+            // Index is either not an integer or there is an integer overflow
+            String negIntRegex = "-\\d+"; // Begins with negative sign followed by only digits
+            String posIntRegex = "\\d+"; // Contains only digits
 
             if (Pattern.matches(negIntRegex, s)) {
+                // Index pattern matches that of a negative integer
                 throw new ParseException(ParserUtil.MESSAGE_INVALID_INDEX);
             } else if (Pattern.matches(posIntRegex, s)) {
+                // Index pattern matches that of a positive integer
                 throw new ParseException(ParserUtil.MESSAGE_OUT_OF_RANGE_INDEX);
             }
 
+            // Index is not an integer
             throw new ParseException(ParserUtil.MESSAGE_INVALID_INDEX_FORMAT);
         }
 
